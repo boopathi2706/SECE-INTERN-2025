@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table,th,td{
+           border: 1px solid black;
+           border-collapse: collapse;
+           padding: 15px 20px;
+        }
+        th{
+            background-color: rgb(68, 68, 240);
+            color: white;
+        }
+    </style>
+    <table>
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+        
+    </table>
+    <script>
+        var arr=[{firstname:"boopathi",lastname:"vijayn"},{firstname:"ajay",lastname:"kannan"},{firstname:"geethapriyan",lastname:"sanmugam"}]
+        let tablebody=document.getElementById("tbody");
+        arr.forEach((item ,index)=>{
+                let row=document.createElement('tr');
+
+                let sno=document.createElement('td');
+                sno.textContent=index+1;
+                row.appendChild(sno);
+
+                let fno=document.createElement('td');
+                fno.textContent=item.firstname;
+                row.appendChild(fno);
+
+                let lno=document.createElement('td');
+                lno.textContent=item.lastname;
+                row.appendChild(lno);
+                
+               tablebody.appendChild(row);
+
+        });
+
+    </script>
+</body>
+</html>

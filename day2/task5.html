@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table{
+            margin-bottom: 20px;
+        }
+        table,th,td{
+           border: 1px solid black;
+           border-collapse: collapse;
+           padding: 15px 20px;
+        }
+        th{
+            background-color: rgb(68, 68, 240);
+            color: white;
+        }
+    </style>
+    <table>
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>name</th>
+                <th>Age</th>
+                <th>CGPA</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+        
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Roll no</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody  id="Statusbody">
+
+        </tbody>
+        
+    </table>
+    <script>
+        var arr=[{name:"boopathi",age:19,cgpa:9.6,dept:"CSE-A"},{name:"ajay",age:19,cgpa:8.6,dept:"CSE-A"},{name:"ananth",age:19,cgpa:8.6,dept:"CSE-A"}]
+        let tablebody=document.getElementById("tbody");
+        arr.forEach((item ,index)=>{
+                let row=document.createElement('tr');
+
+                let sno=document.createElement('td');
+                sno.textContent=index+1;
+                row.appendChild(sno);
+
+                let fno=document.createElement('td');
+                fno.textContent=item.name;
+                row.appendChild(fno);
+
+                let lno=document.createElement('td');
+                lno.textContent=item.age;
+                row.appendChild(lno);
+
+                let cgpa=document.createElement('td');
+                cgpa.textContent=item.cgpa;
+                row.appendChild(cgpa);
+
+                let de=document.createElement('td');
+                de.textContent=item.dept;
+                row.appendChild(de);
+                
+               tablebody.appendChild(row);
+
+        });
+
+        var arry=arr.map(l=>{
+            if(l.cgpa>=9){
+                return "Eligible";
+            }
+            else{
+                return "Not Eligible"
+            }
+        })
+ 
+      console.log(arry);
+        var body=document.getElementById("Statusbody");
+        arry.forEach((items,indexs)=>{
+            let rows=document.createElement('tr');
+
+            let one=document.createElement('td');
+            one.textContent=indexs+1;
+            rows.appendChild(one);
+
+            let two =document.createElement('td');
+            two.textContent=items;
+            rows.appendChild(two);
+
+
+            body.appendChild(rows);
+        });
+    </script>
+</body>
+</html>

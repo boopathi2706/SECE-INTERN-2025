@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        div {
+            margin: 10% 35%;
+            border: 5px solid rgb(24, 241, 24);
+            width: 300px;
+            height: 300px;
+        }
+        form {
+            text-align: center;
+        }
+        input {
+            margin: 15px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-box">
+        <form id="login-form" >
+            <h1>Login</h1>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" required><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required><br>
+            <button onclick="action1()" type="button">Submit</button>
+        </form>
+    </div>
+    <h1 id="message"></h1>
+    <script>
+            let username=prompt("do you access the login form Enter username :");
+            if(username !== null){
+                document.getElementById("username").value=username;
+            }
+            function action1(){
+            username=document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if(username && password){
+                document.getElementById("login-box").style.display = 'none';
+                document.getElementById("message").innerHTML = 'Login successfully';
+            }
+        }
+    </script>
+</body>
+</html>
