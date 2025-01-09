@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            border: 3px solid rgb(38, 236, 38);
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            color: blue;
+        }
+        input{
+            padding: 5px 20px;
+            border: 2px solid rgb(38, 236, 38);
+        }
+        button{
+            padding: 10px 15px;
+            background-color: rgb(38, 236, 38);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px black;
+        }
+    </style>
+    <div>
+        <h1>Result</h1>
+        <input type="number" placeholder="Enter Value" id="result" required><br><br>
+        <button onclick="addition()">Submit</button>
+    </div>
+   
+</body>
+<script>
+    var pre=0;
+    var cur=0;
+    var result=0;
+    function addition(){
+        if(pre===0){
+            pre=parseInt(document.getElementsByTagName("input")[0].value);
+            result=pre;
+        }
+        else{
+            pre=result;
+            cur=parseInt(document.getElementsByTagName("input")[0].value);
+            result=cur+pre;
+            document.getElementById("result").value=result;
+        }
+      
+    }
+
+</script>
+</html>

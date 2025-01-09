@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            height: 60%;
+            padding: 30px 40px;
+            border: 2px solid rgb(29, 235, 29);
+        }
+        input{
+            width: 99%;
+            margin: 10px 0px;
+        }
+        button{
+            width: 30%;
+            height: 10%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="day1-final.html" target="_blank">
+        <label for="ft">First Name</label>
+        <input type="text" name="ft"  id="ft" placeholder="First Name" required>
+        <label for="ft">Last Name</label>
+        <input type="text" name="lt"  id="lt" placeholder="Last Name" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
