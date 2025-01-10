@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Resize with Opacity</title>
+  <style>
+    /* Styling the container */
+    .image-container {
+      width: 300px;
+      height: auto;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    /* Styling the image */
+    .image-container img {
+      width: 100%;
+      height: auto;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect */
+    .image-container img:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="Good Night (2023).jpg" alt="Sample Image">
+  </div>
+</body>
+</html>
